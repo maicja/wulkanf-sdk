@@ -94,6 +94,7 @@ fun List<StudentInfo>.mapHebeUser(
                 privatePem = device.privatePem,
                 hebeBaseUrl = device.restUrl,
                 userName = students.firstOrNull()?.login?.displayName ?: return@mapNotNull null,
+
                 schools = students.mapUnit(),
             )
         },
